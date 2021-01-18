@@ -1,0 +1,139 @@
+body{
+    font: 15px Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:#f4f4f4;
+  }
+
+  .contenedor{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+  }
+  
+  ul{
+    margin:0;
+    padding:0;
+  }
+  header{
+    background:rgb(166, 41, 216);
+    color:#ffffff;
+    padding-top:30px;
+    min-height:70px;
+    border-bottom:#042E49 5px solid; 
+  }
+  
+  header a{
+    color:#ffffff;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:16px;
+  }
+  
+  header li{
+    float: left;
+    display:inline-block;
+    padding: 0 0px 0 30px;
+  }
+  header #marca{
+    float:center;
+  }
+  
+  header #marca h1{
+    margin:0;
+  }
+  
+  header nav{
+    float:right;
+    margin-top:10px;
+ 
+  }
+  
+  header .resaltado, header .actual a{
+    color:#080808;
+    font-weight:bold;
+  }
+  
+  header a:hover{
+    color:#cccccc;
+    font-weight:bold;
+  }
+ 
+  #cajas{
+    margin-top:30px;
+  }
+  
+  #cajas .caja{
+    float:left;
+    text-align: center;
+    width:30%;
+    padding:10px;
+  }
+  
+  #cajas .caja img{
+    width:160px;
+  }
+aside#lateral{
+  float:right;
+  width:30%;
+  margin-top:10px;
+  
+}
+.oscuro{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+article#main-col{
+  float:left;
+  width:65%;
+}
+ ul#servicios li{
+  list-style: none;
+  padding:10px;
+  border: #cccccc solid 1px;
+  margin-bottom:50px;
+  background:#e6e6e6;
+  text-align: center;
+}
+ #main h1{
+   text-align: center;
+   color: #e8491d;
+ }
+ input, textarea{
+  width: 100%;
+  height: 35px;
+  border: 1px solid gray; 
+  margin-bottom: 5px;
+}
+
+textarea{
+  height: 120px;
+}
+
+input[type='submit']{
+  background-color: rgb(166, 41, 216);
+  color: #fff;  
+}
+
+@media(max-width: 768px){
+  header #marca,
+  header nav,
+  header nav li,
+  #cajas .caja,
+  article#main-col,
+  aside#lateral{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+  input, textarea{
+    width: 98%; 
+  }
+}

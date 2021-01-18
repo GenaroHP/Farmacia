@@ -1,0 +1,15 @@
+* {
+	margin:0;
+	padding:0;
+}
+.main {
+	width:90%;
+	max-width:1000px;
+	margin:0px auto;
+}
+.slides {
+	width:100%;
+}
+.slides img {
+	width:100%;
+}
