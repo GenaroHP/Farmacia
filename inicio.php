@@ -49,10 +49,10 @@
         <ul>
           <li class="active"><a href="inicio.php">Inicio</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#departments">Lista de productos</a></li>
-          <li><a href="#doctors">Productos</a></li>
-          <li><a href="">Inventario</a>
-          <li><a href="#contact">Contactos</a></li>
+          <li><a href="#lisproduct">Lista de productos</a></li>
+          <li><a href="#product">Productos</a></li>
+          <li><a href="invert">Inventario</a>
+          <li><a href="contacto.php">Contactos</a></li>
 
         </ul>
       </nav>
