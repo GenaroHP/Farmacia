@@ -1,8 +1,21 @@
+<?php 
+    $servidor="localhost";
+    $usuario="root";
+    $clave="";
+    $baseDeDatos="proyecto_farmacia";
+
+	$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
+
+	if(!$enlace){
+		echo"Error en la conexion con el servidor";
+	}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
     <title>SISTEMA | FARMACIA</title>
   </head>
   <body>

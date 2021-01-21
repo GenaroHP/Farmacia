@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+    <script type="text/javascript" src="js/login.js"></script>
     <title>SISTEMA | FARMACIA</title>
   </head>
   <body>
