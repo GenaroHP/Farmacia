@@ -46,8 +46,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
         <li class="active"><a href="inicio.php">Inicio</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Lista de productos</a></li>
+        <li><a href="list_producto.php">Lista de productos</a></li>
           <li><a href="productos.php">Productos</a></li>
           <li><a href="#">Inventario</a>
           <li><a href="contacto.php">Contactos</a></li>
@@ -136,5 +135,21 @@
         </div>
       </div>
     </section>
-  </body>
+    <footer id="footer">
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Farmacia<strong><span>Jhoncito</span></strong>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+     
+      </div>
+    </div>
+  </footer>
+</body>
 </html>

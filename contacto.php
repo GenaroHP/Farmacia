@@ -56,7 +56,7 @@
         </ul>
       </nav>
 
-      <a href="#appointment" class="appointment-btn scrollto">Hacer Pedido</a>
+      <a href="#appointment" class="appointment-btn scrollto">Realizar Registro</a>
 
     </div>
   </header>

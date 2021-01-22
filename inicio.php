@@ -47,8 +47,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="inicio.php">Inicio</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Lista de productos</a></li>
+          <li><a href="list_producto.php">Lista de productos</a></li>
           <li><a href="productos.php">Productos</a></li>
           <li><a href="#">Inventario</a>
           <li><a href="contacto.php">Contactos</a></li>
@@ -79,10 +78,9 @@
             <div class="content">
               <h3>Porque Elegirnos?</h3>
               <p>
-              Somos una farmacia que lleva a sus espaldas muchos años de vivencias. Con una experiencia en el sector farmacéutico muy extensa, ofrecemos calidad en nuestros productos y 
-              nuestra atención al cliente. Somos una farmacia donde la salud y el bienestar de nuestros clientes nos preocupan y nos importa por eso contamos en 
-              nuestras secciones con productos de primera calidad. Además ofrecemos todo tipo de servicios, desde venta de vitaminas hasta seguimientos farmacoterapéutico, para que nuestros 
-              clientes confíen en nosotros para cualquier cosa que necesiten.
+              Un medicamento es una sustancia con propiedades para el tratamiento o la prevención de enfermedades en los seres humanos.
+                También se consideran medicamentos aquellas sustancias que se utilizan o se administran con el objetivo de restaurar, corregir 
+                o modificar funciones fisiológicas del organismo o aquellas para establecer un diagnóstico médico.
               </p>
               <div class="text-center">
                 <a href="#" class="more-btn">Aprende Más<i class="bx bx-chevron-right"></i></a>
@@ -134,19 +132,26 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
               <h4 class="title"><a href="">Vitaminas</a></h4>
-              <p class="description">Descripción</p>
+              <p class="description">Las vitaminas y los minerales son sustancias imprescindibles para el buen funcionamiento del organismo, porque 
+                intervienen en numerosas reacciones metabólicas. A pesar de que no aportan energía se necesitan en cantidades 
+                mínimas y es imprescindible que se tomen por medio de los alimentos.
+              </p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
               <h4 class="title"><a href="">Jarabes</a></h4>
-              <p class="description">Descripción</p>
+              <p class="description">Los jarabes son un tipo de medicina líquida y de alta viscosidad que posee entre sus componentes azúcar, 
+                este compuesto químico es muy importante ya que cumple muchísimas funciones dentro del jarabe, 
+                entre ellas tenemos un edulcorante que le agrega un sabor dulzón a la mezcla.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-atom"></i></div>
               <h4 class="title"><a href="">Pastillas</a></h4>
-              <p class="description">Descripción</p>
+              <p class="description">Una pastilla es una porción de pasta consistente, que puede tener diversos tamaños, formas y usos. Una de las aceptaciones más 
+                habituales del término se refiere a las pastillas 
+                medicinales, que son comprimidos que incluyen principios activos con actividad terapéutica.</p>
             </div>
 
           </div>
@@ -154,5 +159,23 @@
 
       </div>
     </section>
-    </body>
+    <footer id="footer">
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Farmacia<strong><span>Jhoncito</span></strong>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+     
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
