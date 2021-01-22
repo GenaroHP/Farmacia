@@ -35,8 +35,7 @@
         <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="skype"><i class="icofont-skype"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+    
       </div>
     </div>
   </div>
@@ -47,12 +46,12 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="inicio.php">Inicio</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#lisproduct">Lista de productos</a></li>
-          <li><a href="#product">Productos</a></li>
-          <li><a href="invert">Inventario</a>
-          <li><a href="#contact">Contactos</a></li>
+        <li class="active"><a href="inicio.php">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Lista de productos</a></li>
+          <li><a href="productos.php">Productos</a></li>
+          <li><a href="#">Inventario</a>
+          <li><a href="contacto.php">Contactos</a></li>
 
         </ul>
       </nav>
@@ -184,8 +183,7 @@
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+     
       </div>
     </div>
   </footer>

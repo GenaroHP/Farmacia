@@ -35,8 +35,7 @@
         <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="skype"><i class="icofont-skype"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      
       </div>
     </div>
   </div>
@@ -48,16 +47,16 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="inicio.php">Inicio</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#lisproduct">Lista de productos</a></li>
-          <li><a href="#product">Productos</a></li>
-          <li><a href="invert">Inventario</a>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Lista de productos</a></li>
+          <li><a href="productos.php">Productos</a></li>
+          <li><a href="#">Inventario</a>
           <li><a href="contacto.php">Contactos</a></li>
 
         </ul>
       </nav>
 
-      <a href="#appointment" class="appointment-btn scrollto">Hacer Pedido</a>
+      <a href="#appointment" class="appointment-btn scrollto">Realizar Registro</a>
 
     </div>
   </header>
@@ -146,7 +145,7 @@
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">Pastillass</a></h4>
+              <h4 class="title"><a href="">Pastillas</a></h4>
               <p class="description">Descripción</p>
             </div>
 

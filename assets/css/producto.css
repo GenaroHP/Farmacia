@@ -515,10 +515,9 @@ body {
   # Sections General
   --------------------------------------------------------------*/
   section {
-    padding: 110px 0;
+    padding: 150px 0;
     overflow: hidden;
   }
-  
   .section-bg {
     background-color: #f1f7fd;
   }
@@ -760,10 +759,24 @@ body {
     background-size: cover;
     min-height: 500px;
   }
-
-
-  /*Contacto*/
-  .contact .info {
+  /*--------------------------------------------------------------
+  # Gallery
+  --------------------------------------------------------------*/
+  .gallery .gallery-item {
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+  }
+  
+  .gallery .gallery-item img {
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .gallery .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+   /*Contacto*/
+   .contact .info {
     width: 100%;
     background: #fff;
   }
@@ -909,7 +922,6 @@ body {
       transform: rotate(360deg);
     }
   }
-  
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
@@ -965,7 +977,7 @@ body {
   
   #footer .footer-top .footer-links ul i {
     padding-right: 2px;
-    color: #040505;
+    color: #1c84e3;
     font-size: 18px;
     line-height: 1;
   }
@@ -989,7 +1001,7 @@ body {
   
   #footer .footer-top .footer-links ul a:hover {
     text-decoration: none;
-    color: #afa2a2;
+    color: #1977cc;
   }
   
   #footer .footer-newsletter {
@@ -1011,7 +1023,7 @@ body {
     position: relative;
     border-radius: 50px;
     text-align: left;
-    border: 1px solid #ffffff;
+    border: 1px solid #bfdcf7;
   }
   
   #footer .footer-newsletter form input[type="email"] {
@@ -1029,14 +1041,14 @@ body {
     background: none;
     font-size: 16px;
     padding: 0 20px;
-    background: rgb(166, 41, 216);
+    background: #1977cc;
     color: #fff;
     transition: 0.3s;
     border-radius: 50px;
   }
   
   #footer .footer-newsletter form input[type="submit"]:hover {
-    background:rgb(166, 41, 216);
+    background: #1c84e3;
   }
   
   #footer .credits {
@@ -1048,7 +1060,7 @@ body {
   #footer .social-links a {
     font-size: 18px;
     display: inline-block;
-    background:rgb(166, 41, 216);
+    background: #1977cc;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
@@ -1061,7 +1073,7 @@ body {
   }
   
   #footer .social-links a:hover {
-    background:rgb(166, 41, 216);
+    background: #1c84e3;
     color: #fff;
     text-decoration: none;
   }
