@@ -20,7 +20,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
-  <link href="assets/css/producto.css" rel="stylesheet">
+  <link href="assets/css/product.css" rel="stylesheet">
 
 </head>
 
@@ -73,6 +73,7 @@
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
                 <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                <h2>Pastillas</h2>
               </a>
             </div>
           </div>
@@ -81,6 +82,7 @@
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-2.jpg" class="venobox" data-gall="gallery-item">
                 <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                <h2>Jarabes</h2>
               </a>
             </div>
           </div>
@@ -89,6 +91,7 @@
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-3.png" class="venobox" data-gall="gallery-item">
                 <img src="assets/img/gallery/gallery-3.png" alt="" class="img-fluid">
+                <h2>Vitaminas</h2>
               </a>
             </div>
           </div>
@@ -97,6 +100,7 @@
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-4.jpeg" class="venobox" data-gall="gallery-item">
                 <img src="assets/img/gallery/gallery-4.jpeg" alt="" class="img-fluid">
+                <h2>Inyecciones</h2>
               </a>
             </div>
           </div>
@@ -105,6 +109,7 @@
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-5.jpg" class="venobox" data-gall="gallery-item">
                 <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                <h2>Productos Cosmeticos</h2>
               </a>
             </div>
           </div>
@@ -113,6 +118,7 @@
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-6.jpg" class="venobox" data-gall="gallery-item">
                 <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                <h2>Higiene Personal</h2>
               </a>
             </div>
           </div>
@@ -121,23 +127,31 @@
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
                 <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                <h2>Suplementos Vitaminicos</h2>
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              <a href="assets/img/gallery/gallery.jpg" class="venobox" data-gall="gallery-item">
+                <img src="assets/img/gallery/gallery.jpg" alt="" class="img-fluid">
+                <h2>Productos para Bebes</h2>
               </a>
             </div>
           </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class ="text-center">
+        <a href="#" class="btn">Registrar Producto</a>
         </div>
       </div>
-    </section>
+<br>
+<br>
     <footer id="footer">
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
           &copy; Farmacia<strong><span>Jhoncito</span></strong>

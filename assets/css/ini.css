@@ -680,6 +680,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 30px 0;
+    color: rgb(166, 41, 216);
   }
   
   .why-us .icon-boxes .icon-box p {
@@ -699,7 +700,7 @@ body {
   .about .icon-boxes h3 {
     font-size: 28px;
     font-weight: 700;
-    color: #2c4964;
+    color:  rgb(166, 41, 216);
     margin-bottom: 15px;
   }
   
@@ -741,7 +742,7 @@ body {
   }
   
   .about .icon-box .title a {
-    color: #040607;
+    color:#c211f8;
     transition: 0.3s;
   }
   

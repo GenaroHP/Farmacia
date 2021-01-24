@@ -20,7 +20,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
-  <link href="assets/css/contacto.css" rel="stylesheet">
+  <link href="assets/css/contac.css" rel="stylesheet">
 
 </head>
 
@@ -45,10 +45,9 @@
       <h1 class="logo me-auto"><a href="index.html">FARMACIA JHONCITO</a></h1>
 
       <nav class="nav-menu d-none d-lg-block">
-        <ul>
-        <li class="active"><a href="inicio.php">Inicio</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Lista de productos</a></li>
+      <ul>
+          <li class="active"><a href="inicio.php">Inicio</a></li>
+          <li><a href="list_producto.php">Lista de productos</a></li>
           <li><a href="productos.php">Productos</a></li>
           <li><a href="#">Inventario</a>
           <li><a href="contacto.php">Contactos</a></li>
@@ -151,10 +150,10 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Lista de Productos</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Productos</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Inventario</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contactos</a></li>
             </ul>
           </div>
 

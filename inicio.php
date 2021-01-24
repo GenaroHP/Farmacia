@@ -20,7 +20,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
-  <link href="assets/css/inicio.css" rel="stylesheet">
+  <link href="assets/css/ini.css" rel="stylesheet">
 
 </head>
 
