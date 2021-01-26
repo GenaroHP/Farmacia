@@ -54,12 +54,9 @@
 
         </ul>
       </nav>
-
-      <a href="#appointment" class="appointment-btn scrollto">Realizar Registro</a>
-
+      <a href="productos.php" class="appointment-btn scrollto">Realizar Registro</a>
     </div>
   </header>
-
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <h1>Bienvenido</h1>
@@ -67,9 +64,7 @@
       <a href="#about" class="btn-get-started scrollto">Empezar</a>
     </div>
   </section>
-
   <main id="main">
-
     <section id="why-us" class="why-us">
       <div class="container">
 

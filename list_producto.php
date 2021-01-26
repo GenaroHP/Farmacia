@@ -55,7 +55,7 @@
         </ul>
       </nav>
 
-      <a href="#appointment" class="appointment-btn scrollto">Realizar Registro</a>
+      <a href="productos.php" class="appointment-btn scrollto">Realizar Registro</a>
 
     </div>
   </header>

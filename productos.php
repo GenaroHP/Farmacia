@@ -1,3 +1,15 @@
+<?php 
+    $servidor="localhost";
+    $usuario="root";
+    $clave="";
+    $baseDeDatos="proyecto_farmacia";
+
+	$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
+
+	if(!$enlace){
+		echo"Error en la conexion con el servidor";
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +32,9 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
-  <link href="assets/css/product.css" rel="stylesheet">
+  <link href="assets/css/producto.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/regisproduc.css">
+  
 
 </head>
 
@@ -50,120 +64,79 @@
           <li><a href="productos.php">Productos</a></li>
           <li><a href="#">Inventario</a>
           <li><a href="contacto.php">Contactos</a></li>
-
         </ul>
       </nav>
-
-      <a href="#appointment" class="appointment-btn scrollto">Realizar Registro</a>
+      <a href="productos.php" class="appointment-btn scrollto">Realizar Registro</a>
 
     </div>
   </header>
-  <section id="gallery" class="gallery">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Productos</h2>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-                <h2>Pastillas</h2>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-                <h2>Jarabes</h2>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.png" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-3.png" alt="" class="img-fluid">
-                <h2>Vitaminas</h2>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpeg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-4.jpeg" alt="" class="img-fluid">
-                <h2>Inyecciones</h2>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-5.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-                <h2>Productos Cosmeticos</h2>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-6.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-                <h2>Higiene Personal</h2>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-                <h2>Suplementos Vitaminicos</h2>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery.jpg" alt="" class="img-fluid">
-                <h2>Productos para Bebes</h2>
-              </a>
-            </div>
-          </div>
-          </div>
-        </div>
+  <section id="producto" class="product">
+  <div class="section-title">
         <br>
-        <br>
-        <div class ="text-center">
-        <a href="#" class="btn">Registrar Producto</a>
+          <h2>Registre Productos</h2>
+        </div>
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form action="#">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                <label for="código">Código</label>
+                  <input type="text" name="código" class="form-control"  placeholder="Código" />
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                <label for="nombre">Nombre</label>
+                  <input type="txt" class="form-control" name="nombre"  placeholder="Nombre"/>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+              <label for="fabricante">Fabricante</label>
+                <input type="text" class="form-control" name="fabricante"  placeholder="Fabricante" />
+              </div>
+              <div class="form-group mt-3">
+              <label for="tipo">Tipo</label>
+                <input type="text" class="form-control" name="tipo"  placeholder="Tipo"></textarea>
+              </div>
+              <div class="form-group mt-3">
+              <label for="gramos">Gramos</label>
+                <input type="text" class="form-control" name="gramos"   placeholder="Gramos"></textarea>
+              </div>
+              <div class="form-group mt-3">
+              <label for="precio">Precio</label>
+                <input type="number"min="0.1" step="1" class="form-control" name="precio"   placeholder="Precio"></textarea>
+                <br>
+                <br>
+                <input type="submit" class="btn" name="registrar" value="Registrar">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-<br>
-<br>
-    <footer id="footer">
-    <div class="container d-md-flex py-4">
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Farmacia<strong><span>Jhoncito</span></strong>
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-     
-      </div>
-    </div>
-  </footer>
+    </section>
+  </main>
+</body>
+</html>
+
+<?php
+	if(isset($_POST['registrar'])){
+		$código =$_POST["código"];
+		$nombre =$_POST["nombre"];
+		$fabricante=$_POST["fabricante"];
+		$tipo=$_POST["tipo"];
+		$gramos= $_POST["gramos"];
+		$precio=$_POST["precio"];
+
+		$insertarDatos = "INSERT INTO productos VALUES('$código',
+		                                           '$nombre',
+													'$fabricante',
+													'$tipo',
+													'$gramos',
+													'$precio')";
+
+		$ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
+
+		if(!$ejecutarInsertar){
+			echo"Error En la linea de sql";
+		}
+	}
+?>
 </body>
 </html>

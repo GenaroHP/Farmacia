@@ -515,9 +515,10 @@ body {
   # Sections General
   --------------------------------------------------------------*/
   section {
-    padding: 150px 0;
+    padding: 110px 0;
     overflow: hidden;
   }
+  
   .section-bg {
     background-color: #f1f7fd;
   }
@@ -553,7 +554,7 @@ body {
     display: block;
     width: 40px;
     height: 3px;
-    background: rgb(166, 41, 216);
+    background:rgb(166, 41, 216);
     bottom: 0;
     left: calc(50% - 20px);
   }
@@ -759,27 +760,58 @@ body {
     background-size: cover;
     min-height: 500px;
   }
-  /*--------------------------------------------------------------
-  # Gallery
-  --------------------------------------------------------------*/
-  .gallery .gallery-item {
-    overflow: hidden;
-    border-right: 3px solid #fff;
-    border-bottom: 3px solid #fff;
+
+
+  /*Contacto*/
+  .contact .info {
+    width: 100%;
+    background: #fff;
   }
   
-  .gallery .gallery-item img {
-    transition: all ease-in-out 0.4s;
+  .contact .info i {
+    font-size: 20px;
+    color: rgb(166, 41, 216);
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: rgb(227, 186, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  .contact .php-email-form button[type="submit"] {
+    background: rgb(166, 41, 216);
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
   }
   
-  .gallery .gallery-item:hover img {
-    transform: scale(1.1);
+  .contact .php-email-form button[type="submit"]:hover {
+    background: rgb(166, 41, 216);
   }
-  .gallery .gallery-item h2 {
-    font-weight: bold;
-    color:rgb(166, 41, 216);
+  
+  @-webkit-keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
- 
+  
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
@@ -799,10 +831,12 @@ body {
     margin-bottom: 30px;
   }
   
-  #footer .footer-top .footer-contact h4 {
+  #footer .footer-top .footer-contact h3 {
     font-size: 22px;
     margin: 0 0 30px 0;
     padding: 2px 0 2px 0;
+    color: rgb(166, 41, 216);
+    font-weight: bold;
     line-height: 1;
     font-weight: 700;
   }
@@ -818,7 +852,7 @@ body {
   #footer .footer-top h4 {
     font-size: 16px;
     font-weight: bold;
-    color: #444444;
+    color: rgb(166, 41, 216);
     position: relative;
     padding-bottom: 12px;
   }
@@ -869,7 +903,7 @@ body {
   #footer .footer-newsletter h4 {
     font-size: 16px;
     font-weight: bold;
-    color: #444444;
+    color:  rgb(166, 41, 216);
     position: relative;
     padding-bottom: 12px;
   }
@@ -935,5 +969,4 @@ body {
     color: #fff;
     text-decoration: none;
   }
-  
   

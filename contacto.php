@@ -74,20 +74,17 @@
 
             <div class="info">
               <div class="address">
-                <i class="icofont-google-map"></i>
                 <h4>Ubicación:</h4>
                 <p>Andahuaylas S/N</p>
               </div>
             <br>
             <br>
               <div class="Correo">
-                <i class="icofont-envelope"></i>
                 <h4>Correo:</h4>
                 <p>zjhony854@gmail.com</p>
               </div>
 
               <div class="phone">
-                <i class="icofont-phone"></i>
                 <h4>Teléfono:</h4>
                 <p>+51 973169585</p>
               </div>
