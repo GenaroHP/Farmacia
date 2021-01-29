@@ -3,11 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title>SISTEMA | FARMACIA</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -50,7 +46,7 @@
           <li><a href="acceso.php">Accesos</a></li>
           <li><a href="list_producto.php">Lista de productos</a></li>
           <li><a href="perfil_producto.php">Perfil de Producto</a></li>
-          <li><a href="#">Inventario</a>
+          <li><a href="inventario.php">Inventario</a>
         </ul>
       </nav>
       <a href="../../controller/cerrarSesion.php" class="appointment-btn scrollto">Cerrar Sesión</a>

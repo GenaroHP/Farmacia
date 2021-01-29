@@ -59,8 +59,9 @@
           <li><a href="acceso.php">Accesos</a></li>
           <li><a href="list_producto.php">Lista de productos</a></li>
           <li><a href="perfil_producto.php">Perfil de Producto</a></li>
-          <li><a href="#">Inventario</a>
+          <li><a href="inventario.php">Inventario</a>
         </ul>
+      
       </nav>
       <a href="../../controller/cerrarSesion.php" class="appointment-btn scrollto">Cerrar Sesión</a>
 
@@ -88,35 +89,35 @@
             <form action="#">
               <div class="row">
                 <div class="col-md-6 form-group">
-                <label for="producto">Producto</label>
-                  <input type="text"  name="producto" class="form-control" placeholder="Producto"/>
+                <label for="producto" style="color:rgb(166, 41, 216);"><strong>PRODUCTOS</strong></label>
+                  <input type="text"  name="producto" class="form-control" placeholder="Productos"/>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="tipo">Tipo</label>
+                <label for="tipo" style="color:rgb(166, 41, 216);"><strong>TIPO DE PRODUCTO</strong></label>
                   <input type="text" class="form-control" name="tipo" placeholder="Tipo"/>
                 </div>
               </div>
               <div class="form-group mt-3">
-              <label for="fabricado">Fabricado</label>
+              <label for="fabricado" style="color:rgb(166, 41, 216);"><strong>FECHA DE FABRICACIÓN</strong></label>
                 <input type="date" class="form-control" name="fabricado" required="" />
               </div>
               <div class="form-group mt-3">
-              <label for="comprado">Comprado</label>
+              <label for="comprado" style="color:rgb(166, 41, 216);"><strong>FECHA DE COMPRA</strong></label>
                 <input type="date" class="form-control" name="comprado" required=""></textarea>
               </div>
               <div class="form-group mt-3">
-              <label for="precio">Precio</label>
+              <label for="precio" style="color:rgb(166, 41, 216);"><strong>PRECIO DEL PRODUCTO</strong></label>
                 <input type="number"min="0.1" step="1" class="form-control"name="precio" placeholder="Precio"></textarea>
               </div>
               <div class="form-group mt-3">
-              <label for="cantidad">Cantidad</label>
+              <label for="cantidad" style="color:rgb(166, 41, 216);"><strong>CANTIDAD DEL PRODUCTO</strong></label>
                 <input type="number" min="1" class="form-control" name="cantidad" placeholder="Ingresa la cantidad"></textarea>
                 <div class="form-group mt-3">
-                <label for="vence">Vence</label>
+                <label for="vence" style="color:rgb(166, 41, 216);"><strong>FECHA DE VENCIMIENTO</strong></label>
                 <input type="date" class="form-control" name="vence" required=""></textarea>
                 <br>
                 <br>
-                <input type="submit" class="btn" name="registrar" value="Registrar">
+                <input type="submit" class="btn" name="registrar"style="color:rgb(166, 41, 216);" value="Registrar">
               </div>
             </form>
           </div>
@@ -124,6 +125,44 @@
       </div>
     </section>
   </main>
+  
+  <div class="container">
+		<div id="tabla"></div>
+	</div>
+
+  <section id="container" class="container">
+		<table class="table table-hover table-condensed table-bordered">
+			<tr>
+            <td style="color:rgb(166, 41, 216);" ><strong>PRODUCTOS</strong></td>
+      <td style="color:rgb(166, 41, 216);"><strong>TIPO DE PRODUCTO</strong></td>
+      <td style="color:rgb(166, 41, 216);"><strong>FECHA DE FABRICACIÓN</strong></td>
+      <td style="color:rgb(166, 41, 216);"><strong>FECHA DE COMPRA</strong></td>
+      <td style="color:rgb(166, 41, 216);"><strong>PRECIO DEL PRODUCTO</strong></td>
+			<td style="color:rgb(166, 41, 216);"><strong>CANTIDAD DEL PRODUCTO</strong></td>
+			<td style="color:rgb(166, 41, 216);"><strong>FECHA DE VENCIMIENTO</strong></td>
+			</tr>
+
+			<?php 
+		$sql="SELECT * from perf_producto";
+		$result=mysqli_query($enlace,$sql);
+
+		while($mostrar=mysqli_fetch_array($result)){
+		 ?>
+
+		<tr>
+			<td><?php echo $mostrar['producto'] ?></td>
+      <td><?php echo $mostrar['tipo'] ?></td>
+      <td><?php echo $mostrar['fabricado'] ?></td>
+      <td><?php echo $mostrar['comprado'] ?></td>
+			<td><?php echo $mostrar['precio'] ?></td>
+			<td><?php echo $mostrar['cantidad'] ?></td>
+			<td><?php echo $mostrar['vence'] ?></td>
+		</tr>
+	<?php 
+	}
+	 ?>
+	</table>
+	</div>
 </body>
 </html>
 
