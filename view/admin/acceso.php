@@ -14,7 +14,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <title>SISTEMA | FARMACIA</title>
 
@@ -28,8 +28,9 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="assets/css/inventario.css" rel="stylesheet">
+  <link href="assets/css/acceso.css" rel="stylesheet">
   
 
 </head>
@@ -68,37 +69,64 @@
   <section id="container" class="container">
 		<table class="table table-hover table-condensed table-bordered">
 			<tr>
-      <td style="color:rgb(166, 41, 216);"><strong>PRODUCTOS</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>TIPO DE PRODUCTO</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>PRECIO DEL PRODUCTO</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>CANTIDAD DEL PRODUCTO</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>FECHA DE VENCIMIENTO</strong></td>
-
+      <td style="color:rgb(166, 41, 216);" ><strong>NOMBRE DE USUARIO</strong></td>
+			<td style="color:rgb(166, 41, 216);"><strong>CORREO ELECTRONICO</strong></td>
+			<td style="color:rgb(166, 41, 216);"><strong>CLAVE</strong></td>
+			<td style="color:rgb(166, 41, 216);"><strong>CARGO</strong></td>
+            <td style="color:rgb(166, 41, 216);"><strong>EDITAR</strong></td>
+            <td style="color:rgb(166, 41, 216);"><strong>ELIMINAR</strong></td>
 			</tr>
 
 			<?php 
-		$sql="SELECT * from perf_producto";
-		$result=mysqli_query($enlace,$sql);
+	if(isset($_SESSION['consulta'])){
+    if($_SESSION['consulta'] > 0){
+      $id=$_SESSION['consulta'];
+      $id="SELECT id,nombre,email,clave,cargo
+      from usuarios where id='$id'";
+					}else{
+						$sql="SELECT id,nombre,email,clave,cargo
+						from usuarios";
+					}
+				}else{
+					$sql="SELECT id,nombre,email,clave,cargo
+						from usuarios";
+				}
 
-		while($mostrar=mysqli_fetch_array($result)){
-		 ?>
+				$result=mysqli_query($enlace,$sql);
+				while($ver=mysqli_fetch_row($result)){ 
 
-		<tr>
-			<td><?php echo $mostrar['producto'] ?></td>
-			<td><?php echo $mostrar['tipo'] ?></td>
-			<td><?php echo $mostrar['precio'] ?></td>
-			<td><?php echo $mostrar['cantidad'] ?></td>
-			<td><?php echo $mostrar['vence'] ?></td>
-		</tr>
-	<?php 
-	}
-	 ?>
-	</table>
+					$datos=$ver[0]."||".
+						     $ver[1]."||".
+						     $ver[2]."||".
+                             $ver[3]."||".
+                             $ver[4];
+                              
+			 ?>
+
+			<tr>
+				<td><?php echo $ver[1] ?></td>
+				<td><?php echo $ver[2] ?></td>
+				<td><?php echo $ver[3] ?></td>
+				<td><?php echo $ver[4] ?></td>
+        
+
+				<td>
+					<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
+						
+					</button>
+				</td>
+				<td>
+					<button class="btn btn-danger glyphicon glyphicon-remove" 
+					onclick="preguntarSiNo('<?php echo $ver[0] ?>')">
+						
+					</button>
+				</td>
+			</tr>
+			<?php 
+		}
+			 ?>
+		</table>
 	</div>
 </div>
 </body>
 </html>
-
-
-
-

@@ -14,7 +14,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <title>SISTEMA | FARMACIA</title>
 
@@ -28,6 +28,17 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
+	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/themes/default.css">
+  <link rel="stylesheet" type="text/css" href="librerias/select2/css/select2.css">
+
+	<script src="librerias/jquery-3.2.1.min.js"></script>
+  <script src="js/funciones.js"></script>
+	<script src="librerias/bootstrap/js/bootstrap.js"></script>
+	<script src="librerias/alertifyjs/alertify.js"></script>
+  <script src="librerias/select2/js/select2.js"></script>
 
   <link href="assets/css/productos.css" rel="stylesheet">
   
@@ -40,11 +51,6 @@
       <div class="contact-info">
         <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">zjhony854@gmail.com</a>
         <i class="icofont-phone"></i> <a href="#">+ 51 973169585</a>
-      </div>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
       </div>
     </div>
   </div>
@@ -118,6 +124,7 @@
                 <br>
                 <br>
                 <input type="submit" class="btn" name="registrar"style="color:rgb(166, 41, 216);" value="Registrar">
+                <input type="submit" href="perfil_producto.php" class="btn" style="color:rgb(166, 41, 216);" value="Refrescar">
               </div>
             </form>
           </div>
@@ -125,63 +132,128 @@
       </div>
     </section>
   </main>
-  
-  <div class="container">
-		<div id="tabla"></div>
-	</div>
-
-  <section id="container" class="container">
+   <section id="container" class="container">
 		<table class="table table-hover table-condensed table-bordered">
-			<tr>
-            <td style="color:rgb(166, 41, 216);" ><strong>PRODUCTOS</strong></td>
+		<tr>
+      <td style="color:rgb(166, 41, 216);" ><strong>PRODUCTOS</strong></td>
       <td style="color:rgb(166, 41, 216);"><strong>TIPO DE PRODUCTO</strong></td>
       <td style="color:rgb(166, 41, 216);"><strong>FECHA DE FABRICACIÓN</strong></td>
       <td style="color:rgb(166, 41, 216);"><strong>FECHA DE COMPRA</strong></td>
       <td style="color:rgb(166, 41, 216);"><strong>PRECIO DEL PRODUCTO</strong></td>
 			<td style="color:rgb(166, 41, 216);"><strong>CANTIDAD DEL PRODUCTO</strong></td>
 			<td style="color:rgb(166, 41, 216);"><strong>FECHA DE VENCIMIENTO</strong></td>
+      <td style="color:rgb(166, 41, 216);"><strong>EDITAR</strong></td>
+      <td style="color:rgb(166, 41, 216);"><strong>ELIMINAR</strong></td>
 			</tr>
 
 			<?php 
-		$sql="SELECT * from perf_producto";
-		$result=mysqli_query($enlace,$sql);
+	if(isset($_SESSION['consulta'])){
+    if($_SESSION['consulta'] > 0){
+      $id=$_SESSION['consulta'];
+      $id="SELECT id,producto,tipo,fabricado,comprado,precio,cantidad,vence  
+      from perf_producto where id='$id'";
+					}else{
+						$sql="SELECT id,producto,tipo,fabricado,comprado,precio,cantidad,vence 
+						from perf_producto";
+					}
+				}else{
+					$sql="SELECT id,producto,tipo,fabricado,comprado,precio,cantidad,vence 
+						from perf_producto";
+				}
 
-		while($mostrar=mysqli_fetch_array($result)){
-		 ?>
+				$result=mysqli_query($enlace,$sql);
+				while($ver=mysqli_fetch_row($result)){ 
 
-		<tr>
-			<td><?php echo $mostrar['producto'] ?></td>
-      <td><?php echo $mostrar['tipo'] ?></td>
-      <td><?php echo $mostrar['fabricado'] ?></td>
-      <td><?php echo $mostrar['comprado'] ?></td>
-			<td><?php echo $mostrar['precio'] ?></td>
-			<td><?php echo $mostrar['cantidad'] ?></td>
-			<td><?php echo $mostrar['vence'] ?></td>
-		</tr>
-	<?php 
-	}
-	 ?>
-	</table>
+					$datos=$ver[0]."||".
+						     $ver[1]."||".
+						     $ver[2]."||".
+                 $ver[3]."||".
+                 $ver[4]."||".
+                 $ver[5]."||".
+                 $ver[6]."||".
+                 $ver[7];
+              
+                
+			 ?>
+			<tr>
+				<td><?php echo $ver[1] ?></td>
+				<td><?php echo $ver[2] ?></td>
+				<td><?php echo $ver[3] ?></td>
+				<td><?php echo $ver[4] ?></td>
+        <td><?php echo $ver[5] ?></td>
+        <td><?php echo $ver[6] ?></td>
+        <td><?php echo $ver[7] ?></td>
+
+				<td>
+					<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
+						
+					</button>
+				</td>
+        <div class="modal fade" id="modalEdicion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar datos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <input type="text" hidden="" id="idproducto" name="">
+        	<label>Nombre del Producto</label>
+        	<input type="text" name="producto" id="nombreup" class="form-control input-sm">
+        	<label>Tipo de Producto</label>
+        	<input type="text" name="tipo" id="fabricantep" class="form-control input-ssm">
+        	<label>Fecha de Fabricación</label>
+        	<input type="date"  name="fabricado" id="tipop" class="form-control input-sm">
+        	<label>Fecha de Compra</label>
+        	<input type="date" name="comprado" id="cantidadp" class="form-control input-sm">
+          <label>Precio de Producto</label>
+        	<input type="number" min="0.1" step="1" name="precio" id="preciop" class="form-control input-sm">
+          <label>Cantidad del  Producto</label>
+        	<input type="number"  name="cantidad" id="preciop" class="form-control input-sm">
+          <label>Fecha de Vencimiento</label>
+        	<input type="date"  name="vence" id="preciop" class="form-control input-sm">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" id="actualizadatos" data-dismiss="modal" class="btn btn-primary">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+				<td>
+					<button class="btn btn-danger glyphicon glyphicon-remove" 
+					onclick="preguntarSiNo('<?php echo $ver[0] ?>')">
+						
+					</button>
+				</td>
+			</tr>
+			<?php 
+		}
+			 ?>
+		</table>
 	</div>
+</div>
 </body>
 </html>
-
 <?php
 	if(isset($_POST['registrar'])){
-		$producto =$_POST["producto"];
+    $producto =$_POST["producto"];
 		$tipo =$_POST["tipo"];
 		$fabricado=$_POST["fabricado"];
-		$comprado=$_POST["comprado"];
-		$precio= $_POST["precio"];
-        $cantidad=$_POST["cantidad"];
-        $vence=$_POST["vence"];
+    $comprado=$_POST["comprado"];
+    $precio= $_POST["precio"];
+    $cantidad=$_POST["cantidad"];
+    $vence=$_POST["vence"];
 
-		$insertarDatos = "INSERT INTO perf_producto VALUES('$producto',
-		                                           '$tipo',
-													'$fabricado',
-													'$comprado',
-													'$precio',
-													'$cantidad',
+		$insertarDatos = "INSERT INTO perf_producto VALUES(' ',
+		                                           '$producto',
+                          '$tipo',
+							'$fabricado',
+							'$comprado',											
+              '$precio',
+							'$cantidad',
                                                     '$vence')";
 
 		$ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
@@ -192,5 +264,4 @@
 	}
 ?>
 
-</body>
-</html>
+
