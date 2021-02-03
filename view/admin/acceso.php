@@ -29,6 +29,16 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
+	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/themes/default.css">
+  <link rel="stylesheet" type="text/css" href="librerias/select2/css/select2.css">
+
+	<script src="librerias/jquery-3.2.1.min.js"></script>
+  <script src="js/funciones.js"></script>
+	<script src="librerias/bootstrap/js/bootstrap.js"></script>
+	<script src="librerias/alertifyjs/alertify.js"></script>
+  <script src="librerias/select2/js/select2.js"></script>
 
   <link href="assets/css/acceso.css" rel="stylesheet">
   
@@ -111,10 +121,33 @@
         
 
 				<td>
-					<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalEdicion" onclick="agregaform('<?php echo $datos ?>')">
-						
+					<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalAcceso" onclick="agregaform('<?php echo $datos ?>')">
 					</button>
 				</td>
+        <div class="modal fade" id="modalAcceso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"  style="color:rgb(166, 41, 216);" id="exampleModalLabel"><strong>Actualizar datos</strong></h5>
+        </button>
+      </div>
+      <div class="modal-body">
+      <input type="text" hidden="" id="idproducto" name="">
+        	<label style="color:rgb(166, 41, 216);"><strong>Nombre de Usuario</strong></label>
+        	<input type="text" name="nombre" id="nombreu" class="form-control input-sm">
+        	<label style="color:rgb(166, 41, 216);"><strong>Correo Electronico</strong></label>
+        	<input type="text" name="email" id="correou" class="form-control input-ssm">
+        	<label style="color:rgb(166, 41, 216);"><strong>Clave</strong></label>
+        	<input type="password"  name="clave" id="claveu" class="form-control input-sm">
+        	<label style="color:rgb(166, 41, 216);"><strong>Cargo</strong></label>
+        	<input type="number" min="1" name="cargo" id="cargou" class="form-control input-sm">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><strong>Cerrar</strong></button>
+        <button type="button" id="#" data-dismiss="modal" class="btn btn-secondary"><strong>Actualizar</strong></button>
+      </div>
+    </div>
+  </div>
 				<td>
 					<button class="btn btn-danger glyphicon glyphicon-remove" 
 					onclick="preguntarSiNo('<?php echo $ver[0] ?>')">

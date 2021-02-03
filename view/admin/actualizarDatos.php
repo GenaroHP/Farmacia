@@ -1,4 +1,9 @@
-<?php 
+<?php
+
+ session_start();
+ if(isset($_SESSION['id'])){
+   header('location: ../../');
+ } 
 	require_once "conexion.php";
 	$conexion=conexion();
 	$id=$_POST['id'];
