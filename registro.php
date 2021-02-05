@@ -19,6 +19,7 @@
 
   </head>
   <body>
+  
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-4 col-md-offset-4">
@@ -26,7 +27,7 @@
 
           <form id="formulario_registro">
             <fieldset>
-
+           
               <legend class="center">Registro</legend>
 
               <label class="sr-only" for="user">Nombre</label>
@@ -70,13 +71,14 @@
               <div class="row">
                 <div class="col-xs-8 col-xs-offset-2">
                   <div class="spacing-2"></div>
-                  <button type="button" class="btn btn-primary btn-block" name="button" id="registro">Registrate</button>
+                  <button type="button" class="btn btn-secondary btn-block" name="button" id="registro">Registrate</button>
                 </div>
               </div>
             </fieldset>
           </form>
         </div>
       </div>
+    </div>
     </div>
 
     <script src="js/jquery.js"></script>

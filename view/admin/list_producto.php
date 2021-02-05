@@ -10,6 +10,12 @@
 		echo"Error en la conexion con el servidor";
 	}
 ?>
+<?php 
+  session_start();
+
+  unset($_SESSION['consulta']);
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +41,7 @@
   <link rel="stylesheet" type="text/css" href="librerias/select2/css/select2.css">
 
 	<script src="librerias/jquery-3.2.1.min.js"></script>
-  <script src="js/funciones.js"></script>
+  <script src="js/funcion1.js"></script>
 	<script src="librerias/bootstrap/js/bootstrap.js"></script>
 	<script src="librerias/alertifyjs/alertify.js"></script>
   <script src="librerias/select2/js/select2.js"></script>
@@ -72,24 +78,22 @@
 
     </div>
   </header>
+  
   <section id="registro" class="registro">
   <form action="#" class="registro" id="registro" name="registro" method="POST">
         <div class="container">
         <div class="row mt-5">
         <div class="col-lg-4">
 
-            <div class="info">
+        <div class="info">
               <div class="address">
-                <h4>Ubicación:</h4>
-                <p>Andahuaylas S/N</p>
-              </div>
-          
-              <div class="Correo">
-                <h4>Correo:</h4>
-                <p>zjhony854@gmail.com</p>
+                <h4 style="color:rgb(166, 41, 216);"><strong>PRODUCTOS</strong></h4>
+                <br>
+                <p>Registro de los Productos ingresantes a la Farmacia.</p>
               </div>
             </div>
           </div>
+
           <div class="col-lg-8 mt-5 mt-lg-0">
             <form action="#">
               <div class="row">
@@ -115,8 +119,8 @@
                 <input type="number"min="0.1" step="1" class="form-control"name="precio" placeholder="Precio"></textarea>
                 <br>
                 <br>
-                <input type="submit" class="btn" style="color:rgb(166, 41, 216);" name="registrar" value="Registrar">
-                <input type="submit" href="list_producto.php" class="btn" style="color:rgb(166, 41, 216);" value="Refrescar">
+                <input type="submit" class="btn btn-secondary"  name="registrar" value="Registrar">
+                             
               </div>
             </form>
           </div>
@@ -128,56 +132,6 @@
 		<div id="tabla"></div>
 	</div>
 
-  <section id="container" class="container">
-		<table class="table table-hover table-condensed table-bordered">
-			<tr>
-      <td style="color:rgb(166, 41, 216);" ><strong>NOMBRE DEL PRODUCTO</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>COMPAÑIA FABRICANTE</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>TIPO DE PRODUCTO</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>CANTIDAD DE GRAMOS</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>PRECIO DEL PRODUCTO</strong></td>
-      <td style="color:rgb(166, 41, 216);"><strong>EDITAR</strong></td>
-      <td style="color:rgb(166, 41, 216);"><strong>ELIMINAR</strong></td>
-			</tr>
-
-			<?php 
-	if(isset($_SESSION['consulta'])){
-    if($_SESSION['consulta'] > 0){
-      $id=$_SESSION['consulta'];
-      $id="SELECT id,nombres,fabricante,tipo,gramos,precio 
-      from productos where id='$id'";
-					}else{
-						$sql="SELECT id,nombres,fabricante,tipo,gramos,precio
-						from productos";
-					}
-				}else{
-					$sql="SELECT id,nombres,fabricante,tipo,gramos,precio
-						from productos";
-				}
-
-				$result=mysqli_query($enlace,$sql);
-				while($ver=mysqli_fetch_row($result)){ 
-
-					$datos=$ver[0]."||".
-						     $ver[1]."||".
-						     $ver[2]."||".
-                 $ver[3]."||".
-                 $ver[4]."||".
-                 $ver[5];    
-			 ?>
-
-			<tr>
-				<td><?php echo $ver[1] ?></td>
-				<td><?php echo $ver[2] ?></td>
-				<td><?php echo $ver[3] ?></td>
-				<td><?php echo $ver[4] ?></td>
-        <td><?php echo $ver[5] ?></td>
-
-				<td>
-					<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalLista" onclick="agregaform('<?php echo $datos ?>')">
-						
-					</button>
-				</td>
   <div class="modal fade" id="modalLista" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -186,44 +140,48 @@
         </button>
       </div>
       <div class="modal-body">
-      <input type="text" hidden="" id="idproducto" name="">
+      <input type="text" hidden="" id="idproductos" name="">
+          
         	<label style="color:rgb(166, 41, 216);"><strong>Nombre del Producto</strong></label>
-        	<input type="text" name="nombre" id="nombreup" class="form-control input-sm">
+        	<input type="text" id="nombresp" name="" class="form-control input-sm">
+
         	<label style="color:rgb(166, 41, 216);"><strong>Compañia Fabricante</strong></label>
-        	<input type="text" name="fabricante" id="fabricantep" class="form-control input-ssm">
+        	<input type="text"  id="fabricantep" name="" class="form-control input-ssm">
+
         	<label style="color:rgb(166, 41, 216);"><strong>Tipo de Producto</strong></label>
-        	<input type="text" name="tipo" id="tipop" class="form-control input-sm">
+        	<input type="text"  id="tipop" name="" class="form-control input-sm">
+
         	<label style="color:rgb(166, 41, 216);"><strong>Cantidad de Gramos</strong></label>
-        	<input type="text" name="cantidad" id="cantidadp" class="form-control input-sm">
+        	<input type="text"  id="gramosp" name="" class="form-control input-sm">
+
           <label style="color:rgb(166, 41, 216);"><strong>Precio de Producto</strong></label>
-        	<input type="number" min="0.1" step="1" name="precio" id="preciop" class="form-control input-sm">
+        	<input type="number" min="0.10" step="1"  id="preciop" name="" class="form-control input-sm">
       </div>
       <div class="modal-footer">
         <button type="button"   class="btn btn-secondary" data-dismiss="modal"><strong>Cerrar</strong></button>
-        <button type="button"   id="actualizarDatos" data-dismiss="modal" class="btn btn-secondary"><strong>Actualizar</strong></button>
+        <button type="button" class="btn btn-secondary" id="actualizadatos" data-dismiss="modal">Actualizar</button>
       </div>
     </div>
   </div>
-</div>
-  </div>
-				<td>
-					<button class="btn btn-danger glyphicon glyphicon-remove" 
-					onclick="preguntarSiNo('<?php echo $ver[0] ?>')">
-						
-					</button>
-				</td>
-			</tr>
-			<?php 
-		}
-			 ?>
-		</table>
-	</div>
-</div>
 
-</div>
 </body>
 </html>
- 
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tabla').load('componentes/tabla.php');
+	});
+  </script>
+
+<script type="text/javascript">
+
+        $('#actualizadatos"').click(function(){
+          actualizarProducto();
+        });
+
+    });
+</script>
+
 <?php
 	if(isset($_POST['registrar'])){
 		$nombre =$_POST["nombre"];
@@ -246,3 +204,7 @@
 		}
 	}
 ?>
+<?php 
+          
+  
+

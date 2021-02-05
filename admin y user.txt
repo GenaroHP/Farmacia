@@ -1,3 +1,0 @@
-admin: ingresar:zjhony854@gmail.com
-       contraseña: 12345
-

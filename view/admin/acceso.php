@@ -35,7 +35,7 @@
   <link rel="stylesheet" type="text/css" href="librerias/select2/css/select2.css">
 
 	<script src="librerias/jquery-3.2.1.min.js"></script>
-  <script src="js/funciones.js"></script>
+  <script src="js/funcion2.js"></script>
 	<script src="librerias/bootstrap/js/bootstrap.js"></script>
 	<script src="librerias/alertifyjs/alertify.js"></script>
   <script src="librerias/select2/js/select2.js"></script>
@@ -71,60 +71,24 @@
       <a href="../../controller/cerrarSesion.php" class="appointment-btn scrollto">Cerrar Sesión</a>
     </div>
   </header>
+  <section id="registro" class="registro">
+  <form action="#" class="registro" id="registro" name="registro" method="POST">
+        <div class="container">
+        <div class="row mt-5">
+        <div class="col-lg-4">
+
+            <div class="info">       
+            </div>
+          </div>
+    </section>
+  </main>
 
   <div class="container">
-		<div id="tabla"></div>
+		<div id="tabla2"></div>
 	</div>
 
-  <section id="container" class="container">
-		<table class="table table-hover table-condensed table-bordered">
-			<tr>
-      <td style="color:rgb(166, 41, 216);" ><strong>NOMBRE DE USUARIO</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>CORREO ELECTRONICO</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>CLAVE</strong></td>
-			<td style="color:rgb(166, 41, 216);"><strong>CARGO</strong></td>
-            <td style="color:rgb(166, 41, 216);"><strong>EDITAR</strong></td>
-            <td style="color:rgb(166, 41, 216);"><strong>ELIMINAR</strong></td>
-			</tr>
 
-			<?php 
-	if(isset($_SESSION['consulta'])){
-    if($_SESSION['consulta'] > 0){
-      $id=$_SESSION['consulta'];
-      $id="SELECT id,nombre,email,clave,cargo
-      from usuarios where id='$id'";
-					}else{
-						$sql="SELECT id,nombre,email,clave,cargo
-						from usuarios";
-					}
-				}else{
-					$sql="SELECT id,nombre,email,clave,cargo
-						from usuarios";
-				}
-
-				$result=mysqli_query($enlace,$sql);
-				while($ver=mysqli_fetch_row($result)){ 
-
-					$datos=$ver[0]."||".
-						     $ver[1]."||".
-						     $ver[2]."||".
-                             $ver[3]."||".
-                             $ver[4];
-                              
-			 ?>
-
-			<tr>
-				<td><?php echo $ver[1] ?></td>
-				<td><?php echo $ver[2] ?></td>
-				<td><?php echo $ver[3] ?></td>
-				<td><?php echo $ver[4] ?></td>
-        
-
-				<td>
-					<button class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modalAcceso" onclick="agregaform('<?php echo $datos ?>')">
-					</button>
-				</td>
-        <div class="modal fade" id="modalAcceso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modalAcceso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -132,34 +96,39 @@
         </button>
       </div>
       <div class="modal-body">
-      <input type="text" hidden="" id="idproducto" name="">
+      <br>
+      
+      <input type="text" hidden="" id="idusuarios" name="">
         	<label style="color:rgb(166, 41, 216);"><strong>Nombre de Usuario</strong></label>
-        	<input type="text" name="nombre" id="nombreu" class="form-control input-sm">
+        	<input type="text" name="nombreu" id="nombreu" class="form-control input-sm">
         	<label style="color:rgb(166, 41, 216);"><strong>Correo Electronico</strong></label>
-        	<input type="text" name="email" id="correou" class="form-control input-ssm">
+        	<input type="text" name="emailu" id="correou" class="form-control input-ssm">
         	<label style="color:rgb(166, 41, 216);"><strong>Clave</strong></label>
-        	<input type="password"  name="clave" id="claveu" class="form-control input-sm">
+        	<input type="password"  name="claveu" id="claveu" class="form-control input-sm">
         	<label style="color:rgb(166, 41, 216);"><strong>Cargo</strong></label>
-        	<input type="number" min="1" name="cargo" id="cargou" class="form-control input-sm">
+        	<input type="number" min="1" name="cargou" id="cargou" class="form-control input-sm">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><strong>Cerrar</strong></button>
-        <button type="button" id="#" data-dismiss="modal" class="btn btn-secondary"><strong>Actualizar</strong></button>
+        <button type="button" id="actualiza" data-dismiss="modal" class="btn btn-secondary"><strong>Actualizar</strong></button>
       </div>
     </div>
   </div>
-				<td>
-					<button class="btn btn-danger glyphicon glyphicon-remove" 
-					onclick="preguntarSiNo('<?php echo $ver[0] ?>')">
-						
-					</button>
-				</td>
-			</tr>
-			<?php 
-		}
-			 ?>
-		</table>
-	</div>
-</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tabla2').load('componentes/tabla2.php');
+	});
+  </script>
+
+<script type="text/javascript">
+
+        $('#actualiza"').click(function(){
+          actualizarDatos();
+        });
+
+    });
+</script>
+ 
 </body>
 </html>
+

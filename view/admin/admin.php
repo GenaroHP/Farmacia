@@ -48,9 +48,9 @@
   </header>
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
-      <h1>Bienvenido</h1>
-      <h2>Somos una Farmacia que brinda servicio de Medicamentos</h2>
-      <a href="#about" class="btn-get-started scrollto">Empezar</a>
+      <h1>Bienvenido </h1>
+      <h2>Registro de Medicamentos</h2>
+     
     </div>
   </section>
   <main id="main">
@@ -60,14 +60,10 @@
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-              <h3>Porque Elegirnos?</h3>
-              <p>
-              Un medicamento es una sustancia con propiedades para el tratamiento o la prevención de enfermedades en los seres humanos.
-                También se consideran medicamentos aquellas sustancias que se utilizan o se administran con el objetivo de restaurar, corregir 
-                o modificar funciones fisiológicas del organismo o aquellas para establecer un diagnóstico médico.
-              </p>
+              <h3>Se Realiza</h3>
+              <p>El amplio Registro de Medicamentos entrantes con una gran variedad de productos.</p>
               <div class="text-center">
-                <a href="#" class="more-btn">Aprende Más<i class="bx bx-chevron-right"></i></a>
+                <a href="#" class="more-btn">Realizar Registros<i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -77,70 +73,34 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>Texto</h4>
-                    <p>Descripción</p>
+                    <h4>Vitaminas</h4>
+                    <p>Las vitaminas y los minerales son sustancias imprescindibles para el buen funcionamiento del organismo, porque 
+                intervienen en numerosas reacciones metabólicas. A pesar de que no aportan energía se necesitan en cantidades 
+                mínimas y es imprescindible que se tomen por medio de los alimentos.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Texto</h4>
-                    <p>Descripción</p>
+                    <h4>Jarabes</h4>
+                    <p>Los jarabes son un tipo de medicina líquida y de alta viscosidad que posee entre sus componentes azúcar, 
+                este compuesto químico es muy importante ya que cumple muchísimas funciones dentro del jarabe, 
+                entre ellas tenemos un edulcorante que le agrega un sabor dulzón a la mezcla.n</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
-                    <h4>Texto</h4>
-                    <p>Descripción</p>
+                    <h4>Pastillas</h4>
+                    <p>Una pastilla es una porción de pasta consistente, que puede tener diversos tamaños, formas y usos. Una de las aceptaciones más 
+                habituales del término se refiere a las pastillas 
+                medicinales, que son comprimidos que incluyen principios activos con actividad terapéutica.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="about" class="about">
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-            <a></a>
-          </div>
-
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3>Contamos</h3>
-            <p>Descripción</p>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Vitaminas</a></h4>
-              <p class="description">Las vitaminas y los minerales son sustancias imprescindibles para el buen funcionamiento del organismo, porque 
-                intervienen en numerosas reacciones metabólicas. A pesar de que no aportan energía se necesitan en cantidades 
-                mínimas y es imprescindible que se tomen por medio de los alimentos.
-              </p>
-            </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Jarabes</a></h4>
-              <p class="description">Los jarabes son un tipo de medicina líquida y de alta viscosidad que posee entre sus componentes azúcar, 
-                este compuesto químico es muy importante ya que cumple muchísimas funciones dentro del jarabe, 
-                entre ellas tenemos un edulcorante que le agrega un sabor dulzón a la mezcla.</p>
-            </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">Pastillas</a></h4>
-              <p class="description">Una pastilla es una porción de pasta consistente, que puede tener diversos tamaños, formas y usos. Una de las aceptaciones más 
-                habituales del término se refiere a las pastillas 
-                medicinales, que son comprimidos que incluyen principios activos con actividad terapéutica.</p>
-            </div>
-
-          </div>
-        </div>
-
       </div>
     </section>
     <footer id="footer">
@@ -152,9 +112,8 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://twitter.com/" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
      
       </div>
     </div>
